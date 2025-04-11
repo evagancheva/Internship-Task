@@ -1,0 +1,144 @@
+Test Case: TC01 - Direct Flight
+Description: Return a direct flight route between two cities.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "MLE"
+}
+
+Expected Response:
+[
+  {
+    "route": ["SOF", "MLE"],
+    "price": 70
+  }
+]
+
+
+Test Case: TC02 - Multi-leg Flight (Cheapest First)
+Description: Return cheapest multi-leg route if available.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "MLE"
+}
+
+Expected Response:
+[
+  {
+    "route": ["SOF", "LON", "MLE"],
+    "price": 30
+  },
+  {
+    "route": ["SOF", "MLE"],
+    "price": 70
+  }
+]
+
+
+Test Case: TC03 - No Possible Route
+Description: No connection exists between origin and destination.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "SYD"
+}
+
+Expected Response:
+[]
+
+
+Test Case: TC04 - Circular Route Prevention
+Description: Ensure cities do not repeat in a route.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "MLE"
+}
+
+Expected Behavior: No route includes the same city more than once.
+
+
+Test Case: TC05 - Origin Equals Destination
+Description: When origin and destination are the same, expect no route.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "SOF"
+}
+
+Expected Response:
+[]
+
+
+Test Case: TC06 - Invalid City Code
+Description: City code must be three uppercase, non-repeating letters.
+
+Request:
+{
+  "origin": "SOFX",
+  "destination": "MLE"
+}
+
+Expected Behavior: Status 400 Bad Request
+
+
+Test Case: TC07 - Missing Origin Field
+Description: Check validation when `origin` is missing.
+
+Request:
+{
+  "destination": "MLE"
+}
+
+Expected Behavior: Status 400 Bad Request
+
+
+Test Case: TC08 - maxFlights = 0
+Description: No route should be returned if maxFlights is 0.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "MLE",
+  "maxFlights": 0
+}
+
+Expected Response:
+[]
+
+
+Test Case: TC09 - maxFlights = 1
+Description: Only direct flights should be returned.
+
+Request:
+{
+  "origin": "SOF",
+  "destination": "MLE",
+  "maxFlights": 1
+}
+
+Expected Response:
+[
+  {
+    "route": ["SOF", "MLE"],
+    "price": 70
+  }
+]
+
+
+Test Case: TC10 - Lowercase City Code
+Description: City codes should be case-sensitive.
+
+Request:
+{
+  "origin": "sof",
+  "destination": "MLE"
+}
+
+Expected Behavior: Status 400 Bad Request

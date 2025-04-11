@@ -104,6 +104,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -128,12 +129,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="FlightGraph.cpp" />
+    <ClCompile Include="FlightJsonParser.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Flight.cpp" />
+    <ClCompile Include="Solution.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Flight.h" />
     <ClInclude Include="FlightGraph.h" />
+    <ClInclude Include="FlightJsonParser.h" />
+    <ClInclude Include="Solution.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -7,6 +7,7 @@
 #include <fstream>
 #include <sstream>
 #include <algorithm>
+#include <optional>
 
 class FlightGraph
 {
@@ -23,12 +24,12 @@ private:
 	void addFlight(const Flight& flight);
 	void findRoutesRecursively(const std::string& current, const std::string& destination,
 								std::set<std::string>& visited, Route& path, int currentCost,
-								RouteList& allRoutes)const;
+								RouteList& allRoutes, const std::optional<int>& maxFlight)const;
 
 public:
 
 	FlightGraph(const std::string& filename);
-	RouteList findAllRoutes(const std::string& origin, const std::string& destination) const;
+	RouteList findAllRoutes(const std::string& origin, const std::string& destination, const std::optional<int> maxFlight) const;
 	void printFlights() const;
 	
 };

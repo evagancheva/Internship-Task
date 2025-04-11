@@ -29,7 +29,7 @@ void Flight::setPrice(int price)
 	this->price = price;
 }
 
-bool Flight::isValidCityCode(const std::string& cityCode) const
+bool Flight::isValidCityCode(const std::string& cityCode) 
 {
 
 	if (cityCode.length() != 3) 
@@ -54,7 +54,7 @@ bool Flight::isValidCityCode(const std::string& cityCode) const
 	return true;
 }
 
-Flight::Flight(const std::string& origin, const std::string destination, int price)
+Flight::Flight(const std::string& origin, const std::string& destination, int price)
 {
 	if (origin == destination)
 	{

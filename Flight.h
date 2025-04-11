@@ -14,10 +14,10 @@ class Flight
 	void setOrigin(const std::string& origin);
 	void setDestination(const std::string& destination);
 	void setPrice(int price);
-
-	bool isValidCityCode(const std::string& cityCode) const;
+	
+	static bool isValidCityCode(const std::string& cityCode);
 public:
-	Flight(const std::string& origin, const std::string destination, int price);
+	Flight(const std::string& origin, const std::string& destination, int price);
 
 	std::string getOrigin() const;
 	std::string getDestination() const;

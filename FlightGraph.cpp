@@ -15,12 +15,12 @@ void FlightGraph::processFlightLine(const std::string& line)
         }
         catch (const std::exception& e) 
         {
-            std::cerr << "Skipping invalid flight: " << e.what() << '\n';
+            std::cout << "Skipping invalid flight: " << e.what() << '\n';
         }
     }
     else
     {
-        std::cerr << "Invalid line format: " << line << '\n';
+        std::cout << "Invalid line format: " << line << '\n';
     }
 }
 
@@ -50,8 +50,12 @@ void FlightGraph::addFlight(const Flight& flight)
     flightsGraph[flight.getOrigin()].push_back(flight);
 }
 
-void FlightGraph::findRoutesRecursively(const std::string& current, const std::string& destination, std::set<std::string>& visited, Route& path, int currentCost, RouteList& allRoutes) const
+void FlightGraph::findRoutesRecursively(const std::string& current, const std::string& destination, std::set<std::string>& visited, Route& path, int currentCost, RouteList& allRoutes, const std::optional<int>& maxFlight) const
 {
+    if (maxFlight.has_value() && currentCost > maxFlight.value()) 
+    {
+        return;
+    }
     if (current == destination) 
     {
         allRoutes.emplace_back(path, currentCost);
@@ -72,7 +76,7 @@ void FlightGraph::findRoutesRecursively(const std::string& current, const std::s
             visited.insert(next);
             path.push_back(flight);
 
-            findRoutesRecursively(next, destination, visited, path, currentCost + flight.getPrice(), allRoutes);
+            findRoutesRecursively(next, destination, visited, path, currentCost + flight.getPrice(), allRoutes,maxFlight);
 
             path.pop_back();
             visited.erase(next);
@@ -84,20 +88,17 @@ FlightGraph::FlightGraph(const std::string& filename)
 {
 	readFromFile(filename);
 }
-FlightGraph::RouteList FlightGraph::findAllRoutes(const std::string& origin, const std::string& destination) const
+FlightGraph::RouteList FlightGraph::findAllRoutes(const std::string& origin, const std::string& destination, const std::optional<int> maxFlights) const
 {
     RouteList allRoutes;
     std::set<std::string> visited;
     Route path;
 
     visited.insert(origin);
-    findRoutesRecursively(origin, destination, visited, path, 0, allRoutes);
+    findRoutesRecursively(origin, destination, visited, path, 0, allRoutes, maxFlights);
 
     std::sort(allRoutes.begin(), allRoutes.end(),
-        [](const auto& a, const auto& b) 
-        {
-            return a.second < b.second;
-        });
+        [](const auto& a, const auto& b) {return a.second < b.second; });
 
     return allRoutes;
 }

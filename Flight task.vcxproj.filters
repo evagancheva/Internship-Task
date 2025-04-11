@@ -24,12 +24,24 @@
     <ClCompile Include="FlightGraph.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="FlightJsonParser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Solution.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Flight.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="FlightGraph.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="FlightJsonParser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
