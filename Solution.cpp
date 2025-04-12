@@ -12,7 +12,17 @@ void Solution::run()
                 try
                 {
                     auto request = FlightJsonParser::parseRequest(req.body);
+<<<<<<< HEAD
+                    if (request.maxFlights.has_value() && request.maxFlights.value() < 0)
+                    {
+                        res.status = 400;
+                        json error = { {"error", "maxFlights must be >= 0"} };
+                        res.set_content(error.dump(), "application/json");
+                        return;
+                    }
+=======
 
+>>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60
                     auto routesWithCost = graph.findAllRoutes(
                         request.origin,
                         request.destination,

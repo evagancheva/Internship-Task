@@ -28,6 +28,10 @@ FlightJsonParser::Request FlightJsonParser::parseRequest(const std::string& json
             int maxFlightsValue;
             j[JsonFields::MAX_FLIGHTS].get_to(maxFlightsValue);  
             request.maxFlights = maxFlightsValue;
+<<<<<<< HEAD
+            std::cout << request.maxFlights.value();
+=======
+>>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60
         }
 
         return request;
@@ -40,6 +44,18 @@ FlightJsonParser::Request FlightJsonParser::parseRequest(const std::string& json
 
 std::string FlightJsonParser::createResponse(const std::vector<Route>& routes)
 {
+<<<<<<< HEAD
+    json response;
+    response["routes"] = json::array();
+    for (const auto& route : routes)
+    {
+        response["routes"].push_back({
+            {"cities", route.cities},
+            {"price", route.price}
+            });
+    }
+    return response.dump(2);
+=======
     json j = json::array();
 
     for (const auto& route : routes)
@@ -47,4 +63,5 @@ std::string FlightJsonParser::createResponse(const std::vector<Route>& routes)
         j.push_back({ {"route", route.route}, {"price", route.price} });
     }
     return j.dump(4);
+>>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60
 }

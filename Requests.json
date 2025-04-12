@@ -1,4 +1,105 @@
 [
+<<<<<<< HEAD
+  //Request 1
+  {
+    "origin": "SOF",
+    "destination": "MLE",
+    "maxFlights": 3
+  },
+  //Request 2
+  {
+    "origin": "SOF",
+    "destination": "MLE",
+    "maxFlights": 0
+  },
+  //Request 3
+  {
+    "origin": "SOF",
+    "destination": "MLE",
+    "maxFlights": 100
+  },
+  //Request 4
+  {
+    "origin": "SOF",
+    "destination": "SOF"
+  },
+  //Request 5
+  {
+    "origin": "SOF"
+  },
+  //Request 6
+  {
+    "destination": "IST"
+  },
+  //Request 7
+  {
+    "origin": "",
+    "destination": ""
+  },
+  //Request 8
+  {
+    "origin": "###",
+    "destination": "!!!"
+  },
+  //Request 9 
+  {
+    "origin": "SOF",
+    "destination": "IST",
+    "maxFlights": -1
+  },
+  //Request 10
+  {
+    "origin": "SOF",
+    "destination": "LON",
+    "maxFlights": 3
+  },
+  //Request 11
+  {
+    "origin": "SOF",
+    "destination": "AAA"
+  },
+  //Request 12
+  {
+    "origin": "SOF",
+    "destination": "MLE",
+    "maxFlights": null
+  },
+  //Request 13
+  {
+    "origin": "SOF",
+    "destination": "MLE",
+    "maxFlights": "three"
+  },
+  //Request 14
+  {
+    "origin": 123,
+    "destination": 456
+  },
+  //Request 15
+  {
+    "origin": "SOF",
+    "destination": "IST",
+    "extraField": true
+  }
+  //Request 16
+  {
+
+  }
+  //Request 17
+  {
+    "origin": "sof",
+    "destination": "ist"
+  }
+  //Request 18
+  {
+    "origin": "SOF",
+    "destination": "MLE",
+    "maxFlights": 1
+  }
+
+]
+
+=======
   {
     "origin": "LAX",
     "destination": "SFO"
@@ -45,3 +146,4 @@
     "maxFlights": 0
   }
 ]
+>>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60

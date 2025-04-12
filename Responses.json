@@ -1,4 +1,228 @@
 [
+<<<<<<< HEAD
+  //Response1:
+  {
+    "routes": [
+      {
+        "cities": [
+          "SOF",
+          "LON",
+          "MLE"
+        ],
+        "price": 30.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "NYC",
+          "LON",
+          "MLE"
+        ],
+        "price": 55.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "IST",
+          "CMB",
+          "MLE"
+        ],
+        "price": 70.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "MLE"
+        ],
+        "price": 70.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "LON",
+          "CMB",
+          "MLE"
+        ],
+        "price": 75.0
+      }
+    ]
+  },
+  //Response2:
+  {
+    "routes": []
+  },
+  //Response3
+  {
+    "routes": [
+      {
+        "cities": [
+          "SOF",
+          "LON",
+          "MLE"
+        ],
+        "price": 30.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "NYC",
+          "LON",
+          "MLE"
+        ],
+        "price": 55.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "IST",
+          "CMB",
+          "MLE"
+        ],
+        "price": 70.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "MLE"
+        ],
+        "price": 70.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "LON",
+          "CMB",
+          "MLE"
+        ],
+        "price": 75.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "IST",
+          "CMB",
+          "NYC",
+          "LON",
+          "MLE"
+        ],
+        "price": 100.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "NYC",
+          "LON",
+          "CMB",
+          "MLE"
+        ],
+        "price": 100.0
+      }
+    ]
+  },
+  //Response 4
+  {
+    "routes": [
+      {
+        "cities": [],
+        "price": 0.0
+      }
+    ]
+  },
+  //Response 5
+  "Error:Invalid/missing destination field",
+
+  //Response 6
+  "Error:Invalid/missing origin field",
+
+  //Response 7
+  {
+    "routes": [
+      {
+        "cities": [],
+        "price": 0.0
+      }
+    ]
+  },
+  //Response 8
+  {
+    "routes": [
+      {
+        "cities": [],
+        "price": 0.0
+      }
+    ]
+  },
+  //Response 9
+  { "error": "maxFlights must be >= 0" },
+
+  //Response 10
+  {
+    "routes": [
+      {
+        "cities": [
+          "SOF",
+          "LON"
+        ],
+        "price": 10.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "NYC",
+          "LON"
+        ],
+        "price": 35.0
+      },
+      {
+        "cities": [
+          "SOF",
+          "MLE",
+          "NYC",
+          "LON"
+        ],
+        "price": 95.0
+      }
+    ]
+  },
+  //Response 11
+  {
+    "routes": []
+  },
+  //Response 12
+  "Error Field max flights must be integer",
+
+  //Response 13
+  "Error Field max flights must be integer",
+
+  //Response 14
+  "Error:Invalid/missing origin field",
+
+  //Response 15
+  "Error:Field max flights must be integer",
+
+  //Response 16
+  "Error:Invalid/missing origin field"
+
+  //Response 17
+  {
+    "routes": []
+  }
+  //Request 18
+  {
+    "routes": [
+      {
+        "cities": [
+          "SOF",
+          "MLE"
+        ],
+        "price": 70.0
+      }
+    ]
+  }
+
+
+]
+=======
   [
     {
       "route": [
@@ -79,3 +303,4 @@
   [],
   []
 ]
+>>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60
