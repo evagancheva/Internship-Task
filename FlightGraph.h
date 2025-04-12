@@ -23,13 +23,8 @@ private:
 	void readFromFile(const std::string& filename);
 	void addFlight(const Flight& flight);
 	void findRoutesRecursively(const std::string& current, const std::string& destination,
-<<<<<<< HEAD
 								std::set<std::string>& visited, Route& path, size_t currentCost,
 								RouteList& allRoutes, const std::optional<int>& maxFlight, size_t currCount )const;
-=======
-								std::set<std::string>& visited, Route& path, int currentCost,
-								RouteList& allRoutes, const std::optional<int>& maxFlight)const;
->>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60
 
 public:
 

@@ -22,11 +22,7 @@ public:
 	};
 	struct Route 
 	{
-<<<<<<< HEAD
 		std::vector<std::string> cities;
-=======
-		std::vector<std::string> route;
->>>>>>> afe148e4ea043600816a76ac16bba2f6083d5a60
 		double price;
 	};
 	
